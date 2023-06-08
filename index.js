@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function() {
     }
 
     function startInterval(){
-        intervalId = setInterval(nextSlide,80000);
+        intervalId = setInterval(nextSlide,8000);
     }
     
     function resetInterval(){
