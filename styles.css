@@ -30,60 +30,13 @@
     width: 100%;
     height: 90%;
     opacity:0;
-    /* Additional styles for slide appearance */
     transition: opacity 0.7s ease-in-out;
     transition: background-size 3s ease-in-out, opacity 0.7s ease-in-out;
     display:flex;
     justify-content: center;
-    background-size:100% ; /* Scale the background image to cover the entire element */
-    background-position: center; /* Center the background image */
+    background-size:100% ; 
+    background-position: center; 
     background-color: rgba(0, 0, 0, 0.5);
-}
-
-.zoom{
-    background-size:120%;
-}
-
-@media (max-width:1100px) {
-    .slide{
-        background-size:auto 100% ; /* Scale the background image to cover the entire element */
-    }
-    .zoom{
-        background-size:auto 120%;
-    }
-}
-
-.pa{
-    margin-top: 8vh;
-    font-family:'ClashGrotesk';
-    font-size: 70px;
-    opacity: 0.5;
-    transition: all 3s;
-    text-align: center;
-    text-wrap: wrap;
-    /* overflow: visible; */
-    padding: 0px 30px;
-    transform:scale(0.7);
-}
-
-.active{
-    opacity:1;
-}
-
-.active1{
-    opacity: 1;
-    transform:scale(1);
-    z-index: 2;
-}
-
-#slide1{
-    background-image: url('nature3.png'); /* Replace 'your-image.jpg' with your actual image URL */
-    background-repeat: no-repeat;
-}
-
-#slide2{
-    background-image: url('dumbbells-fitness.png'); /* Replace 'your-image.jpg' with your actual image URL */
-
 }
 
 .slideVisual{
@@ -97,38 +50,25 @@
     align-items: center;
 }
 
+.text{
+    margin-top: 8vh;
+    font-family:'ClashGrotesk';
+    font-size: 70px;
+    opacity: 0.5;
+    transition: all 3s;
+    text-align: center;
+    text-wrap: wrap;
+    padding: 0px 30px;
+    transform:scale(0.7);
+}
+
 .bottle{
-    /* height:100%; */
-    /* width:auto; */
     transform: translateY(150px);
     transition: all 2s;
-    /* height: 300px; */
     aspect-ratio: 9/16;
-    /* scale: 0.6; */
     height:750px;
     width:421px;
     z-index: 2;
-}
-
-@media (max-width:1000px) {
-    .bottle{
-        height: 500px;
-        width: 281px;
-    }
-    .pa{
-        font-size:48px;
-        line-height: 48px;
-    }
-}
-
-.moveup{
-    transform: translateY(0px);
-}
-
-.background{
-    top:0;
-    bottom:0;
-    height:100%;
 }
 
 .ski{
@@ -139,7 +79,74 @@
     transition: all 2s;
 }
 
+/* slide ids, add more as needed, just needed for background image url */
+
+#slide1{
+    background-image: url('nature3.png'); /* Replace 'your-image.jpg' with your actual image URL */
+}
+
+#slide2{
+    background-image: url('dumbbells-fitness.png'); /* Replace 'your-image.jpg' with your actual image URL */
+
+}
+
+/* ------ action classes ----- */
+
+.zoom{
+    background-size:120%;
+}
+
+.active{
+    opacity:1;
+}
+
+.textactive{
+    opacity: 1;
+    transform:scale(1);
+    z-index: 2;
+}
+
+.moveup{
+    transform: translateY(0px);
+}
+
 .skimove{
     transform: translateX(100%) translateY(-20%);
 }
+
+
+/* ---------- media queries ----------------- */
+
+
+@media (max-width:1100px) {
+    .slide{
+        background-size:auto 100% ; /* Scale the background image to cover the entire element */
+    }
+    .zoom{
+        background-size:auto 120%;
+    }
+}
+
+@media (max-width:1000px) {
+    .bottle{
+        height: 500px;
+        width: 281px;
+    }
+    .text{
+        font-size:48px;
+        line-height: 48px;
+    }
+}
+
+@media (max-height:800px){
+    .bottle{
+        height: 500px;
+        width: 281px;
+    }
+    .text{
+        font-size:48px;
+        line-height: 48px;
+    }
+}
+
 
