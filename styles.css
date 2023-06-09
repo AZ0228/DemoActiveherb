@@ -151,4 +151,17 @@
 
 }
 
+@media (max-height:700px){
+    .bottle{
+        height:400px;
+        width: 225px;
+
+    }
+    .text{
+        font-size:40px;
+        line-height: 40px;
+        margin-top: 2vh;
+    }
+}
+
 
